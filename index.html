@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Задание Табы">
+  <meta name="author" content="Дарья Шипилова">
+  <link rel="stylesheet" href="./index.css">
+  <title>Аккордеон</title>
+</head>
+<body class="body">
+  <header class="header">
+    <div class="header__content">
+      <div class="header__logo"></div>
+      <p class="header__text">Текст</p>
+    </div>
+    <div class="header__line">
+      <div class="header__short-line"></div>
+    </div>
+  </header>
+  <h1 class="body__header">Аккордеон</h1>
+  <div class="accordeon">
+    <div class="accordeon__item">
+      <button type="button" class="accordeon__button" id="1">
+        Таб 1
+        <img class="accordeon__img" alt="Стрелка" src="./images/down.svg"/>
+      </button>
+      <ul class="accordeon__content">
+        <li class="accordeon__text">Элемент 1</li>
+        <li class="accordeon__text">Элемент 2</li>
+        <li class="accordeon__text">Элемент 3</li>
+        <li class="accordeon__text">Элемент 4</li>
+        <li class="accordeon__text">Элемент 5</li>
+      </ul>
+    </div>
+    <div class="accordeon__item">
+      <button type="button" class="accordeon__button" id="2">
+        Таб 2
+        <img class="accordeon__img" alt="Стрелка" src="./images/down.svg"/>
+      </button>
+      <ul class="accordeon__content">
+        <li class="accordeon__text">Элемент 1</li>
+        <li class="accordeon__text">Элемент 2</li>
+        <li class="accordeon__text">Элемент 3</li>
+        <li class="accordeon__text">Элемент 4</li>
+        <li class="accordeon__text">Элемент 5</li>
+      </ul>
+    </div>
+    <div class="accordeon__item">
+      <button type="button" class="accordeon__button accordeon__button_last" id="3">
+        Таб 3
+        <img class="accordeon__img" alt="Стрелка" src="./images/down.svg"/>
+      </button>
+      <ul class="accordeon__content">
+        <li class="accordeon__text">Элемент 1</li>
+        <li class="accordeon__text">Элемент 2</li>
+        <li class="accordeon__text">Элемент 3</li>
+        <li class="accordeon__text">Элемент 4</li>
+        <li class="accordeon__text">Элемент 5</li>
+      </ul>
+    </div>
+  </div>
+  <button type="button" value="Продолжить" class="body__button" disabled>Продолжить</button>
+  <div class="body__line"></div>
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+@import url(./fonts/fonts.css);
+
+.body {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 1000px;
+  font-family: 'Golos', Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  height: min-content;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 45px 0 40px;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  column-gap: 28px;
+}
+
+.header__text {
+  font-size: 14px;
+}
+
+.header__line {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin-top: 18px;
+  background: linear-gradient(to left, #73BE43 0, #73BE43 50%, #E9262D 50%, #E9262D 100%);
+}
+
+.header__short-line {
+  background-color: #E9262D;
+  max-width: 385px;
+  width: 40%;
+  height: 5px;
+  position: absolute;
+}
+
+.header__logo {
+  background-image: url(./images/1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 33px;
+}
+
+.body__header {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 30px;
+}
+
+.body__line {
+  height: 5px;
+  width: 100%;
+  margin-top: 26px;
+  background: linear-gradient(to left, #73BE43 0, #73BE43 50%, #E9262D 50%, #E9262D 100%);
+}
+
+.body__button {
+  width: 189px;
+  height: 52px;
+  margin: 20px auto 0;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #cacaca;
+}
+
+.body__button:hover:enabled{
+  cursor: pointer;
+}
+
+.accordeon {
+  max-width: 950px;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  transition: all 0.4s;
+}
+
+.accordeon__button {
+  width: 100%;
+  min-height: 65px;
+  font-family: 'Golos';
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #E9262D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+}
+
+.accordeon__button_last {
+  border-bottom: 1px solid #E9262D;
+}
+
+.accordeon__button_active {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordeon__item_active {
+  border-left: 4px solid #E9262D;
+}
+
+.accordeon__img {
+  width: 32px;
+  height: 32px;
+}
+
+.accordeon__img_active {
+  transform: rotate(180deg);
+}
+
+.accordeon__content {
+  padding: 0 30px 20px;
+  list-style-type: none;
+  display: none;
+  overflow: hidden;
+  margin: 8px 0 0;
+}
+
+.accordeon__content_active {
+  display: block;
+}
+
+.accordeon__text {
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+.accordeon__text::before {
+  content: '\2013';
+  color: #73BE43;
+  font-weight: bold;
+  display: inline-block;
+  width: 15px;
+  margin-left: -15px;
+}
+
+.accordeon__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
