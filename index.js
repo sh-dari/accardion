@@ -1,23 +1,24 @@
 const accordeonButtons = document.querySelectorAll(".accordeon__button");
+const accordeonItems = document.querySelectorAll(".accordeon__item");
 const continueButton = document.querySelector('.body__button');
 
-let buttonClicked = [];
+const countItems = accordeonItems.length;
+let countItemsActive = 0;
 
 const isAllAccordeons = () => {
-    let intersection = ['1', '2', '3'].filter(x => !buttonClicked.includes(x));
-    if (intersection.length == 0) {
+    countItemsActive = document.querySelectorAll(".done").length;
+    if (countItemsActive === countItems) {
         continueButton.disabled = false;
     }
 }
 
 const handleAccordeon = (evt) => {
-    const {id} = evt.currentTarget;
     const accordeon = evt.target.closest('.accordeon__item');
     accordeon.querySelector(".accordeon__content").classList.toggle("accordeon__content_active");
     evt.target.classList.toggle("accordeon__button_active");
     accordeon.classList.toggle("accordeon__item_active");
     accordeon.querySelector(".accordeon__img").classList.toggle("accordeon__img_active");
-    buttonClicked.push(id);
+    accordeon.classList.add("done");
     isAllAccordeons();
 };
 
